@@ -16,9 +16,9 @@ public class MyFinancesExporter {
     private CsvHandler csvHandler;
     private ConfigurationHandler config;
 
-    public MyFinancesExporter() throws IOException {
-        csvHandler = new CsvHandler();
-        config = new ConfigurationHandler();
+    public MyFinancesExporter(ConfigurationHandler config, CsvHandler csvHandler) throws IOException {
+        this.config = config;
+        this.csvHandler = csvHandler;
     }
 
     public boolean exportDespesasToCSv(List<DespesaCSV> despesas) throws FileNotFoundException {

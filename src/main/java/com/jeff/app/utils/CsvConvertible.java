@@ -1,6 +1,9 @@
 package com.jeff.app.utils;
 
-public interface CsvConvertible {
+import java.util.List;
 
-    public String toCsv();
+public interface CsvConvertible <T> {
+
+    String toCsv();
+    T fromCsv(List<List<String>> records);
 }

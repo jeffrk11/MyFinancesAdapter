@@ -2,7 +2,9 @@ package com.jeff.app.model;
 
 import com.jeff.app.utils.CsvConvertible;
 
-public class DespesaCSV implements CsvConvertible {
+import java.util.List;
+
+public class DespesaCSV implements CsvConvertible<DespesaCSV> {
 
     private String descricao;
     private float valor;
@@ -90,5 +92,10 @@ public class DespesaCSV implements CsvConvertible {
                 .append(getSubCategoria()).append(",")
                 .append(getNomeCartao()).append(",")
                 .append(getObservacao()).toString();
+    }
+
+    @Override
+    public DespesaCSV fromCsv(List<List<String>> records) {
+        return null;
     }
 }

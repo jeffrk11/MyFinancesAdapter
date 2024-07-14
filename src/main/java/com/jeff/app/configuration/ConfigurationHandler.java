@@ -21,5 +21,8 @@ public class ConfigurationHandler {
     public String getReceitasCsvOutputFilepath(){
         return properties.getProperty("receita.csv.output.filepath");
     }
+    public String getStatementsCsvInputFilepath(){
+        return properties.getProperty("bank.csv.input.filepath");
+    }
 }
 

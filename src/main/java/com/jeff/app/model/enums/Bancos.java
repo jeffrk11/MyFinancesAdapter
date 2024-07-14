@@ -1,7 +1,8 @@
 package com.jeff.app.model.enums;
 
 public enum Bancos {
-    BPI("BPI");
+    BPI("BPI"),
+    REVOLUT("REVOLUT");
 
     private String name;
 
